@@ -8,8 +8,9 @@ import {
   Drawer,
 } from "@mui/material";
 import React, { ReactNode, useState } from "react";
-import MenuIcon from "@mui/icons-material/Menu";
+
 import { Link, useNavigate, useRoutes } from "react-router-dom";
+import TopBar from "./Topbar";
 
 interface Prop {
   children: ReactNode;
@@ -20,60 +21,7 @@ const Layout = ({ children }: Prop) => {
   return (
     <Box sx={{ maxWidth: "1300px", mx: "auto" }}>
       <Box sx={{ mt: 5 }}>
-        <Box
-          sx={{
-            bgcolor: "transparent",
-            height: 50,
-          }}
-        >
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-            }}
-          >
-            <Box sx={{ maxWidth: 100 }}>
-              <Box component="img" src="bird.png" sx={{ width: "100%" }} />
-            </Box>
-            <Box
-              sx={{ color: "info.main", display: { xs: "none", sm: "block" } }}
-            >
-              <Link to="/" style={{ textDecoration: "none" }}>
-                <Button>
-                  <Typography sx={{ color: "info.main" }}>Home</Typography>
-                </Button>
-              </Link>
-              |
-              <Link to="/birds" style={{ textDecoration: "none" }}>
-                <Button>
-                  <Typography sx={{ color: "info.main" }}>Birds</Typography>
-                </Button>
-              </Link>
-            </Box>
-            <Button
-              onClick={() => {
-                router("/birds");
-              }}
-              sx={{
-                height: "100%",
-                "&:hover": { bgcolor: "info.main", color: "primary.main" },
-                display: { xs: "none", sm: "block" },
-              }}
-              variant="contained"
-            >
-              Let's fly
-            </Button>
-            <Box
-              sx={{ p: 3, display: { xs: "block", sm: "none" } }}
-              onClick={() => {
-                setOpen(true);
-              }}
-            >
-              <MenuIcon sx={{ fontSize: "2rem", color: "info.main" }} />
-            </Box>
-          </Box>
-        </Box>
+        <TopBar setOpen={setOpen} open={open} />
       </Box>
       <Box sx={{ my: 10 }}>{children}</Box>
       <Box
@@ -84,7 +32,7 @@ const Layout = ({ children }: Prop) => {
         }}
       >
         <Box sx={{ maxWidth: 100 }}>
-          <Box component="img" src="bird.png" sx={{ width: "100%" }} />
+          <Box component="img" src="../bird.png" sx={{ width: "100%" }} />
         </Box>
         <Box sx={{ color: "info.main" }}>
           <Button
@@ -104,46 +52,35 @@ const Layout = ({ children }: Prop) => {
           </Button>
         </Box>
       </Box>
-      <Box sx={{}}>
+      <Box sx={{ width: "100%" }}>
         <Drawer
+          disableScrollLock={true}
+          sx={{ width: "100%" }}
           anchor={"top"}
           open={open}
           onClose={() => {
             setOpen(false);
           }}
-          sx={{ width: " 50%" }}
+          ModalProps={{
+            style: {
+              backgroundColor: "primary.main",
+            },
+          }}
         >
           <Box
             sx={{
               bgcolor: "primary.main",
               width: "100%",
-              mx: "auto",
+              height: "150px",
             }}
           >
             <Box
               sx={{
                 color: "info.main",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "center",
-                p: 3,
+                mt: 5,
               }}
             >
-              <Button
-                onClick={() => {
-                  router("/");
-                }}
-              >
-                <Typography sx={{ color: "info.main" }}>Home</Typography>
-              </Button>
-              <Button
-                onClick={() => {
-                  router("/birds");
-                }}
-              >
-                <Typography sx={{ color: "info.main" }}>Birds</Typography>
-              </Button>
+              <TopBar setOpen={setOpen} open={open} />
             </Box>
           </Box>
         </Drawer>

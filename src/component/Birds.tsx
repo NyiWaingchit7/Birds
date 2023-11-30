@@ -34,6 +34,7 @@ const Birds = () => {
         {birds.map((b) => {
           return (
             <Box
+              key={b.Id}
               sx={{
                 width: { xs: "60%", sm: "25% ", md: "25%", lg: "15%" },
                 mr: 10,
