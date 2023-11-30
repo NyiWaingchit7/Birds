@@ -5,7 +5,7 @@ import { birds } from "../utils/birdsData";
 import { Link } from "react-router-dom";
 const Birds = () => {
   return (
-    <Box>
+    <Box sx={{ width: "100%" }}>
       <Box
         sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
       >
@@ -25,8 +25,8 @@ const Birds = () => {
           flexDirection: "column",
           alignItems: "center",
           flexWrap: "wrap",
-          maxWidth: "1300px",
-          maxHeight: { sm: "400vh", lg: "250vh" },
+          maxWidth: "1100px",
+          maxHeight: { sm: "700vh", md: "500vh", lg: "300vh", xl: "200vh" },
           mx: "auto",
           mt: 5,
         }}
@@ -35,7 +35,7 @@ const Birds = () => {
           return (
             <Box
               sx={{
-                width: { xs: "60%", sm: "40% ", lg: "15%" },
+                width: { xs: "60%", sm: "25% ", md: "25%", lg: "15%" },
                 mr: 10,
               }}
             >
