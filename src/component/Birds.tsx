@@ -45,8 +45,8 @@ const Birds = () => {
               >
                 <Card
                   sx={{
-                    bgcolor: "primary.light",
-                    "&:hover": { bgcolor: "primary.dark" },
+                    bgcolor: "secondary.light",
+                    "&:hover": { bgcolor: "secondary.dark" },
                     m: 2,
                     borderRadius: 10,
                     p: 3,

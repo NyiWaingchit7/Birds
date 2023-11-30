@@ -18,8 +18,8 @@ const UpperBirdCard = () => {
       <Link to={"/birds"} style={{ textDecoration: "none" }}>
         <Card
           sx={{
-            bgcolor: "primary.light",
-            "&:hover": { bgcolor: "primary.dark" },
+            bgcolor: "secondary.light",
+            "&:hover": { bgcolor: "secondary.dark" },
             m: 2,
             borderRadius: 10,
             maxWidth: "100%",
@@ -66,8 +66,8 @@ const UpperBirdCard = () => {
       >
         <Box
           sx={{
-            bgcolor: "primary.light",
-            "&:hover": { bgcolor: "primary.dark" },
+            bgcolor: "secondary.light",
+            "&:hover": { bgcolor: "secondary.dark" },
             width: { xs: "90%", sm: "80%", lg: "70%" },
             mx: "auto",
             height: "90%",
@@ -120,8 +120,8 @@ const UpperBirdCard = () => {
         </Box>
         <Box
           sx={{
-            bgcolor: "primary.light",
-            "&:hover": { bgcolor: "primary.dark" },
+            bgcolor: "secondary.light",
+            "&:hover": { bgcolor: "secondary.dark" },
             m: 2,
             p: 2,
             borderRadius: 10,
@@ -154,7 +154,7 @@ const UpperBirdCard = () => {
                     boxShadow: 3,
                     borderRadius: "50%",
                     mr: 5,
-                    bgcolor: "primary.dark",
+                    bgcolor: "secondary.dark",
                     p: 1,
                   }}
                 >
@@ -179,7 +179,7 @@ const UpperBirdCard = () => {
                   sx={{
                     boxShadow: 3,
                     borderRadius: "50%",
-                    bgcolor: "primary.dark",
+                    bgcolor: "secondary.dark",
                     p: 1,
                   }}
                 >

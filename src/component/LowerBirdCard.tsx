@@ -22,7 +22,7 @@ const LowerBirdCard = () => {
           flexWrap: "wrap",
           justifyContent: "center",
           alignItems: "center",
-          bgcolor: "primary.light",
+          bgcolor: "secondary.light",
           m: 2,
           borderRadius: 10,
           width: { xs: "80%", lg: "60%" },
@@ -35,8 +35,8 @@ const LowerBirdCard = () => {
               key={c.id}
               sx={{
                 boxShadow: 3,
-                bgcolor: "primary.light",
-                "&:hover": { bgcolor: "primary.dark" },
+                bgcolor: "secondary.light",
+                "&:hover": { bgcolor: "secondary.dark" },
 
                 width: { xs: "100%", sm: "10%", md: "15%", lg: "15%" },
                 m: 2,
@@ -62,8 +62,8 @@ const LowerBirdCard = () => {
       <Box
         sx={{
           width: { xs: "80%", md: "20%", lg: "30%" },
-          bgcolor: "primary.light",
-          "&:hover": { bgcolor: "primary.dark" },
+          bgcolor: "secondary.light",
+          "&:hover": { bgcolor: "secondary.dark" },
           borderRadius: 10,
           mx: 3,
           p: 2,

@@ -111,6 +111,7 @@ const Layout = ({ children }: Prop) => {
           onClose={() => {
             setOpen(false);
           }}
+          sx={{ width: " 50%" }}
         >
           <Box
             sx={{
